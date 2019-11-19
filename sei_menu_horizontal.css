@@ -80,8 +80,8 @@ padding: 2px;
         height: 36px;
         /*background-image: linear-gradient(to bottom, transparent 50%, #2680ff 50%), linear-gradient(to right, #218bff 50%, #297cff 50%);*/
         /*background-image: linear-gradient(to bottom, transparent 50%, #306eff 50%), linear-gradient(to right, #2386ff 50%, #306eff 50%);*/
-        /*background-image: linear-gradient(to bottom, transparent 50%, #234582 50%), linear-gradient(to right, #0c51a5 50%, #234581 50%);*/
-	background: repeating-radial-gradient(closest-side at 15px 25px, #ca5 15%, #eee 40%);
+        background-image: linear-gradient(to bottom, transparent 50%, #234582 50%), linear-gradient(to right, #0c51a5 50%, #234581 50%);
+	/*background: repeating-radial-gradient(closest-side at 15px 25px, #ca5 15%, #eee 40%);*/
         /*background-size: 10px 10px, 10px 10px;*/
 	background-size: 60px 40px;
         transition: height 0.5s;
