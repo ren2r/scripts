@@ -1,5 +1,9 @@
-body{
+html{
     background: #ffffef;
+}
+#divRecebidos table, #divGerados table {
+    box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.4);
+    padding: 4px;
 }
 #divInfraAreaTelaE{ display:none; }
 #divInfraAreaTelaD{ float:left; width: 99.5%!important; }
