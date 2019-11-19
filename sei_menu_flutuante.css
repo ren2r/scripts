@@ -1,3 +1,6 @@
+body{
+    background: #f7f2c6;
+}
 #divInfraAreaTelaE{ display:none; }
 #divInfraAreaTelaD{ float:left; width: 99.5%!important; }
 #ifrVisualizacao{ width: 76.5%}#lnkInfraMenuSistema{display:none; }
