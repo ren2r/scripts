@@ -196,11 +196,12 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 .infraBarraSistemaE img { filter: hue-rotate(30deg) brightness(95%); }
 
 #divInformacao {
-	position: fixed;
+	/*position: fixed;*/
 	bottom: 0px;
+	margin-top: 40px;
 	padding: 4px;
-	margin-bottom: 16px;
-	margin-left: -10px;
+	/*margin-bottom: 16px;*/
+	/*margin-left: -10px;*/
 	background: white;
 	/*margin-top: 52px;
 	margin-left: 24px;*/
