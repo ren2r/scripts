@@ -19,6 +19,10 @@ body::-webkit-scrollbar-thumb:hover{
 	background: #444;
 }
 
+#divInfraAreaTela {
+	height: auto!important;
+}
+
 #selInfraUnidades:not([multiple]) {
 	-webkit-appearance: none;
 	-moz-appearance: none;
