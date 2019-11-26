@@ -164,6 +164,11 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*pointer-events: none;*/
 	/*border-radius: 0.5rem;*/
 	border: 0px;
+	-webkit-user-drag: none; 
+	-khtml-user-drag: none; 
+	-moz-user-drag: none; 
+	-o-user-drag: none; 
+	user-drag: none; 
 	/*background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);*/
 	/*background-image: linear-gradient(to right, #1e3c72 0%, #2a5298 51%, #1e3c72 100%);*/
 	background-image: linear-gradient(to right, #3168ff 0%, #10acff 51%, #3267ff 100%);
