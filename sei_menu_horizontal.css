@@ -161,7 +161,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 .infraBarraComandos#divComandos img {
 	border:	 1px solid #ddd!important;
 	border-radius: 4px;
-	pointer-events: none;
+	/*pointer-events: none;*/
 	/*border-radius: 0.5rem;*/
 	border: 0px;
 	/*background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);*/
