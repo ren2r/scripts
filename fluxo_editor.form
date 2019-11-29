@@ -1,0 +1,136 @@
+<div id="snackbar">Some text some message..</div>
+<div id="dialogo"  title="" style="display: none" >
+<p style="display:none; background: #ff7825;margin: -1px;padding: 5px;">Vinculado a: <span id='vinculado'></span></p>
+<div id="accordion">
+
+    <h3><span id='subtitulo_controle' style='overflow: hidden; text-overflow:ellipsis;'></span></h3>
+    <div>
+    <form id='dados' autocomplete='off'>
+        <input id='data_lancamento' class='input' name='data_lancamento' type='hidden' readonly>
+        <input id='periodo_inicio'  class='input' name='periodo_inicio'  type='hidden' readonly>
+        <input id='usuario'         class='input' name='usuario'         type='hidden' readonly>
+        <input id='_id'             class='input' name='_id'             type='hidden' readonly>
+
+        <div class="floating-label">
+			<input id="interessado" class="floating-input input ref" type="text" placeholder=" " name="interessado"  data-tipo="interessado">
+			<!--<span class="highlight"></span>-->
+			<label>Autor / Interessado</label>
+            <span id="interessado_id" style="position:absolute; right: 0px; cursor: context-menu;" title="Clique com o botão direito para consultar"></span>
+		</div>
+
+        <div class="floating-label">
+			<textarea id="assunto" class="floating-textarea input" placeholder=" " name="assunto" rows=1></textarea>
+			<!--<span class="highlight"></span>-->
+			<label>Assunto</label>
+		</div>
+
+        <div class="floating-label" style="display: none">
+			<input id="destino" class="floating-input input" type="text" placeholder=" " name="destino" data-tipo="destino">
+			<label>Destino da Viagem</label>
+		</div>
+
+		<div class="floating-label" style="display: none;">
+            <fds title="O período compreende sábado ou domingo"style='display:none; position: relative; float: right; margin: 9px 22px -28px; padding: 3px; background-color: red;'>Fim de Semana</fds>
+			<input id="periodo" class="floating-input input" type="text" placeholder=" " name="periodo">
+			<label>Período da Atividade ou Afastamento</label>
+            <dias title="Quantidade máxima de diárias" style='display:none; position: relative; float: left; margin: -8px 26px 0px; background-color: #eaeae4;'>< Até 5 dias ></dias>
+                <img title="Compentência/Exercício" onclick="$('#competencia').show(); $(this).parent().hide()" alt="Competência/Exercício" src="/sei/imagens/sei_relacionados.png"/>
+		</div>
+
+		<div id="competencia">
+			<div class="floating-label" style="display: inline-block; width: 45%;">
+				<input id="mes" class="floating-input input" type="text" placeholder=" " data-tipo="mes">
+				<label>Competência</label>
+			</div>
+			<div class="floating-label" style="display: inline-block; width: 50%; margin-left: 3%;">
+				<input id="exercicio" class="floating-input input" type="text" placeholder=" " name="exercicio">
+				<label>Exercício</label>
+			</div>
+                <img title="Período" onclick="$(this).parent().hide(); $('#periodo').parent().show()" alt="Periodo" src="/sei/imagens/sei_relacionados.png"/>
+		</div>
+
+		<div class="floating-tag">
+            <span class='dot_tag ref' id='acao'    style="display: none" name='acao'></span>
+            <span class='dot_tag ref' id='despesa' style="display: none" name='despesa'></span>
+            <span class='dot_tag ref' id='fonte'   style="display: none" name='fonte'></span>
+			<div class="floating-input-tag" id="dotacao" contenteditable="true"accesskey="d" data-tipo="dotacao"><br></div>
+			<label>Dotação</label>
+                <img id='saldo_fiplan' src="/sei/editor/ck/plugins/extenso/images/extenso.png" alt="Plan60"
+                    title="(Necessário estar logado no FIPLAN neste navegador) Abrir janela para consulta saldo do Fiplan"
+                    style="position: relative; float: right; cursor: pointer; margin: -25px 0px -30px;"
+                />
+		</div>
+
+        <div class="floating-label" >
+			<input id="acp" class="floating-input input ref" type="text" placeholder=" " name="acp" data-tipo="acp">
+			<label>Unidade de Custo</label>
+            <span id="acp_id" style="position: absolute; right: 10px; top: 7px; font-size: 11pt;"></span>
+		</div>
+
+		<div class="floating-label valor">
+			<input id="valor" class="money-bank floating-input input" placeholder=" " type="text" name="valor" title="Este campo permite realizar operações simples como soma e multiplicação."/>
+            <span id='total'></span>
+			<label>Valor da Despesa</label>
+		</div>
+	</form>
+  </div>
+<!--<h3  id='checklist' class='ui-state-disabled'><span>Checklist do Processo</span></h3>
+<div id="lista_checklist">
+</br>
+
+  <ul>
+    <li class="checked">Solicitação de Diárias</li>
+    <li>Comprovação</li>
+    <li>Formulário X</li>
+    <li>Assinaturas</li>
+  </ul>
+
+<div class="floating-label">
+	   <input id="myInput" class="floating-input input" type="text" placeholder=" ">
+	   <label>Novo item...</label>
+	</div>
+</div>-->
+
+<h3  id='detalhes' class='ui-state-disabled'><span>Detalhamento do ACP (Pré-SRD)</span></h3>
+  <div id='detalhes_sub'>
+    <div>
+      <div id="detalhe">
+        </br>
+        <span>Interessado: </span><span id="credor_nome"></span></br>
+        <span>Valor Lançado: </span><span id="valor_total"></span></br>
+        <div class="floating-label" style="display: inline-block; width: 45%;">
+          <input id="acp_detalhe" class="floating-input input" type="text" placeholder=" " name="acp" autocomplete="off" data-tipo="acp">
+          <label>Unidade de Custo</label>
+        </div>
+        <a onclick="var x = $('#detalhe div'); $(this).after($(x[0])).before($(x[1]));"  style="display: inline-block; cursor:pointer; margin: 2%;">&#8652;</a>
+        <div class="floating-label" style="display: inline-block; width: 40%;">
+          <input id="valor_detalhe" class="floating-input input" type="text" placeholder=" " name="valor" title='Enter para adicionar' autocomplete="off" style="text-align: right;padding-right: 10px;">
+          <label>Valor</label>
+        </div>
+      </div>
+
+      <br>
+      <table id='lista_detalhe' style="table-layout: fixed;width: 100%;" ><col span="1" class="coluna_valor">
+      <!--<thead><tr>
+        <th onclick="w3.sortHTML('#lista_detalhe > tbody','tr', 'td:nth-child(1)')" colspan="2" width="60%">&#9650;&#9660;</th>
+        <th onclick="w3.sortHTML('#lista_detalhe > tbody','tr', 'td:nth-child(3)')" colspan="2" >&#9650;&#9660;</th>
+        <th width='15px'></th>
+        </tr></thead>-->
+        <tbody></tbody>
+      </table>
+      <div style="position: -webkit-sticky;position: sticky;bottom: -8px;font-size: 13px;background: #fff;z-index: 1;">
+        <p style="text-align: right;padding: 5px; padding-right: 28px;font-weight: bolder;border: 1px solid #fbd850;">Total: <span id="soma_valor_detalhe" style="font-weight: bolder;">R$ 0,00</span></p>
+      </div>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  </div>
+</div>
+
+<div id='menu_interessado'>
+    <div id='items'>
+      <p id='_copiar' title="Copiar o número do CPF/CNPJ">Copiar Número</p>
+      <p id='_extrato' title="Consulta o extrato do Fornecedor">Extrato do Fornecedor</p>
+      <p id='_credor_fiplan' title="Necessário estar logado no Fiplan neste navegador">FIPLAN - Consulta Credor</p>
+      <p id='_empenhos' title="Necessário estar logado no Fiplan neste navegador">FIPLAN - Consultar Empenhos</p>
+    </div>
+</div>
