@@ -1,0 +1,660 @@
+    /*html, body { height: 99%; }
+    div.infraAreaGlobal{height: 100%;}*/
+    .ui-autocomplete-loading {
+        background: url("/infra_css/imagens/aguarde.gif") right center no-repeat!important;
+        background-size: 16px 16px!important;
+    }
+
+    #dialogo {
+      overflow: hidden;
+    }
+
+    #dialogo *, .ui-autocomplete  {
+      font-family: Roboto, Helvetica, Arial, Times, serif;
+    }
+
+	#dialogo .ui-accordion-content::-webkit-scrollbar,
+        .ui-autocomplete::-webkit-scrollbar {
+		width: 6px;
+	}
+    #dialogo .ui-accordion-content::-webkit-scrollbar-track,
+        .ui-autocomplete::-webkit-scrollbar-track {
+		background: transparent;
+	}
+    #dialogo .ui-accordion-content::-webkit-scrollbar-thumb,
+        .ui-autocomplete::-webkit-scrollbar-thumb {
+		background: #777;
+	}
+
+    #dialogo .ui-accordion-content::-webkit-scrollbar:hover,
+        .ui-autocomplete::-webkit-scrollbar:hover{
+		width: 12px;
+	}
+
+    #dialogo .ui-accordion-content::-webkit-scrollbar-thumb:hover,
+        .ui-autocomplete::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+    .ui-widget-overlay{
+		width:100% !important;
+		height:100% !important;
+	}
+    .floating-label {
+        margin-top: 30px;
+		position:relative;
+		/*margin-bottom:30px;*/
+	}
+    .floating-input , .floating-select {
+        /*text-transform: uppercase;*/
+        /*text-transform: capitalize;*/
+        text-overflow: ellipsis;
+		font-size:14px!important;
+		/*padding:4px 4px!important;*/
+        /*color: #fff;*/
+		display:block;
+		width:100%;
+		height:30px;
+		background-color: transparent;
+		border:none;
+		border-bottom:1px solid #757575;
+	}
+    .floating-textarea {
+		font-size:13px!important;
+		background-color: transparent;
+		border:none;
+		display:block;
+		width:100%;
+		min-height: 30px;
+		max-height: 260px;
+		overflow:hidden;
+		overflow-x: hidden;
+		resize: vertical;
+		border-bottom:1px solid #757575;
+	}
+    .floating-input:focus , .floating-select:focus, .floating-textarea:focus {
+		background-color: transparent;
+		outline:none;
+		border-bottom:1px solid #5264AE;
+	}
+    label {
+		/*color:#999;*/
+        color: #969696;
+		font-size:14px;
+		font-weight:normal;
+		position:absolute;
+		pointer-events:none;
+		left:5px;  top:5px;
+		transition:0.2s ease all;
+		-moz-transition:0.2s ease all;
+		-webkit-transition:0.2s ease all;
+	}
+    .floating-label > input:focus ~ label, .floating-label > textarea:focus ~ label,
+    .floating-input:not(:placeholder-shown) ~ label,
+    .floating-textarea:not(:placeholder-shown) ~ label,
+    .floating-input-tag:focus ~ label,
+    .dot_tag:not(:empty) ~ label{
+		top:-16px;
+		font-size:12px;
+        color: #5264AE;
+	}
+
+    .floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+		top:-18px;
+		font-size:12px;
+		color:#5264AE;
+	}
+    .floating-input:focus ~ .bar:before, .floating-input:focus ~ .bar:after,
+	.floating-select:focus ~ .bar:before, .floating-select:focus ~ .bar:after {
+		width:50%;
+	}
+    .highlight {
+		position:absolute;
+		height:50%;
+		width:100%;
+		top:15%;
+		left:0;
+		pointer-events:none;
+		opacity:0.5;
+	}
+    .floating-input:focus ~ .highlight , .floating-select:focus ~ .highlight,
+	.floating-textarea:focus ~ .highlight {
+		-webkit-animation:inputHighlighter 0.3s ease;
+		-moz-animation:inputHighlighter 0.3s ease;
+		animation:inputHighlighter 0.3s ease;
+	}
+    @-webkit-keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to { width:0; background:transparent; }
+	}
+    @-moz-keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to { width:0; background:transparent; }
+	}
+    @keyframes inputHighlighter {
+		from { background:#5264AE; }
+		to { width:0; background:transparent; }
+	}
+    .floating-tag {
+		position:relative;
+		margin-top:30px;
+		outline:none;
+		border-bottom:1px solid #757575;
+	}
+    .floating-input-tag {
+		font-size:14px;
+		height:26px;
+        padding-top: 6px;
+		background-color: transparent;
+		border:none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+	}
+
+
+
+    .floating-input-tag:focus ~ .highlight {
+		-webkit-animation:inputHighlighter 0.3s ease;
+		-moz-animation:inputHighlighter 0.3s ease;
+		animation:inputHighlighter 0.3s ease;
+	}
+    [contenteditable]:focus {
+		outline: 0px solid transparent;
+		word-wrap: break-word;
+	}
+    #acao{
+		padding-left: 5px;
+	}
+	.dot_tag{
+		float:left;
+		background: #b8e76f;
+		color: #3d5d18;border: 1px solid #74b21e;
+		text-align:center;
+		padding: 4px;
+		margin: 2px 2px 2px 0;
+		font-size:14px;
+		cursor: alias;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+    .myPosition {
+		position: absolute; right: 200px;
+	}
+    .no-close .ui-dialog-titlebar-close {
+		display: none;
+	}
+    .ui-dialog .ui-dialog-titlebar {
+		cursor: default;
+	}
+	.blinking{
+		animation:blinkingText 1.5s infinite;
+	}
+	@keyframes blinkingText{
+		0%{		background: orange;	}
+		100%{	background: transparent;	}
+	}
+	#dialogo .ui-button-text {
+		font-size: 16px;
+		padding: 10px 5px 1px 10px; /* Or whatever makes it small enough. */
+	}
+
+
+
+    #lista_detalhe {
+      table-layout:fixed;
+      width: 100%;
+      border: transparent;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font: normal 13px Arial, sans-serif;
+      top: 10px;
+      position: relative;
+    }
+
+    #lista_detalhe thead th {
+      border-botton: solid 1px #333;
+      padding: 3px;
+      text-align: center;
+      text-shadow: 1px 1px 1px #fff;
+    }
+
+    #lista_detalhe tbody td {
+      border: none;
+      border-top: solid 1px #CCC;
+      color: #333;
+      padding: 4px;
+      text-shadow: 1px 1px 1px #fff;
+    }
+    #lista_detalhe tbody tr:hover {
+      background-color: #DDD;
+    }
+
+    #lista_detalhe tr span.delete {
+        display: inline-block;
+        font-size:12px;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+
+    #dialogo span.delete::after{
+      content:'\\2717';
+      cursor: pointer;
+    }
+
+    #lista_detalhe span.delete:hover{
+      color: #F00;
+      font-weight: bold;
+
+    }
+    #lista_detalhe tr th:nth-child(4){
+       width: 1px;
+     }
+
+    .noselect {
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome and Opera */
+    }
+
+    .dot_tag:hover:after{
+        border: 1px solid #fc0;
+        width: 100%;
+        font-size:12px;
+        padding: 3px 4px;
+        background: #fffea1;
+        content: attr(data-title);
+        position: absolute;
+        left: 0px;
+        top: 28px;
+        /*margin-right: 10px;*/
+        z-index: 100;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+
+    .ui-autocomplete {
+		max-height: 150px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+        background: #fff;
+    }
+
+    .ui-autocomplete li div{
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    mark {
+        background: hsl(65, 100%, 50%);
+    }
+
+    li:hover mark {
+        background: hsl(68, 100%, 41%);
+    }
+
+    li[aria-selected="true"] mark {
+        background: hsl(86, 100%, 21%);
+        color: inherit;
+    }
+
+
+
+    [aria-describedby="dialogo"].ui-dialog{
+        padding: 0px;
+    }
+    [aria-describedby="dialogo"].ui-dialog-content {
+        padding: 0px;
+	}
+    .ui-dialog .ui-dialog-content {
+      border: 0;
+      padding: .1em .1em;
+    }
+
+    .ui-accordion .ui-accordion-content {
+        padding: .5em 1em;
+    }
+
+
+    .ui-dialog-buttonpane, .ui-accordion-content{
+        background: transparent;
+    }
+
+    [aria-describedby="dialogo"].ui-dialog {
+      /*background: #555;*/
+      /*background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e!important;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.48), 0 3px 6px 0 rgba(0,0,0,0.32);*/
+      border-radius: 0;
+      background: rgba( 234, 234, 228, 0.99)!important;
+      color: #acb2b8;
+      margin-bottom: 2px;
+      border: 1px solid #26384f;
+      box-shadow: 0 0 5px #000;
+      overflow: hidden;
+    }
+
+    .ui-dialog-titlebar {
+      /*margin: -2px;*/
+      /*min-height: 10px;*/
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      background: linear-gradient(to right, #3366ff, #00ccff);
+    }
+
+    .ui-dialog-titlebar span {
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .ui-dialog .ui-dialog-titlebar-minimize, .ui-dialog .ui-dialog-titlebar-restore {
+        border-radius: 10px;
+    }
+
+    #interessado_id:not(:empty):before {
+        content: "CPF/CNPJ: ";
+    }
+
+    #acp_id:not(:empty):before {
+        content: "ACP: ";
+    }
+
+    [aria-describedby="dialogo"] .ui-dialog-titlebar span:empty:before {
+        content: "Não Lançado";
+    }
+
+    [aria-describedby="dialogo"] .ui-dialog-titlebar span:not(:empty):before {
+        content: "Salvo em ";
+    }
+    #total{
+
+        display: none;
+        position: absolute;
+        right: 0px;
+        margin: -20px 0;
+    }
+    #total::before {
+        content: "= "
+    }
+
+    #valor:focus ~ #total{
+        display:block;
+    }
+
+#detalhe {
+   position: -webkit-sticky;
+   position: sticky;
+   top: -10px;
+   font-size: 12px;
+   /*margin-top: -6px;*/
+   /*position: absolute;*/
+   background: rgba( 234, 234, 228, 0.99)!important;
+   z-index: 1;
+}
+
+
+  /* Checklist */
+
+#lista_checklist ul {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+}
+
+/* Style the list items */
+#lista_checklist ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 8px 8px 24px;
+  font-size: 12px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#lista_checklist ul li:nth-child(odd) {
+/*  background: #f9f9f9;*/
+}
+
+/* Darker background-color on hover */
+#lista_checklist ul li:hover {
+  background: #ddd;
+}
+
+#lista_checklist ul li:hover span {
+    display: block;
+}
+
+/* When clicked on, add a background color and strike out text */
+#lista_checklist ul li.checked {
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#lista_checklist ul li.checked::before {
+  content: ' \\2714';
+  position: absolute;
+  font-size: 15px;
+  top: 4px;
+  left: 5px;
+}
+
+/* Style the close button */
+.close {
+  font-size: 16px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 8px 4px 8px;
+}
+
+.close:hover {
+  /*background-color: #aaa;*/
+  font-weight: bold;
+  color: #f44336;
+}
+
+/* Style the "Add" button */
+#lista_checklist .addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+#lista_checklist .addBtn:hover {
+  background-color: #bbb;
+}
+
+#dados {
+  margin: 0px;
+}
+
+
+hr.style14 {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f000, #000, #f0f0f000);
+  background-image: -moz-linear-gradient(left, #f0f0f00000, #000, #f0f0f000);
+  background-image: -ms-linear-gradient(left, #f0f0f000, #000, #f0f0f000);
+  background-image: -o-linear-gradient(left, #f0f0f000, #000, #f0f0f000);
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1003; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the top */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+
+.ui-datepicker {
+  height: auto;
+  margin: 0px auto 0;
+  font: 9pt Arial, sans-serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08bbff), color-stop(100%,#316bff));
+    border: 0;
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 0;
+}
+
+.ui-state-hover {
+border: 1px solid #222;
+-webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08bbff), color-stop(100%,#316bff));
+z-index = 99999;
+}
+.ui-datepicker-calendar .ui-state-default {
+    border: 1px transparent;
+    min-width: 20px;
+    font-weight: bold;
+    background: transparent;
+    text-align: center;
+    color: #111;
+}
+
+/* .ui-datepicker-calendar .ui-state-active {
+border: transparent;
+background: transparent!important;
+color: #111!important;
+}*/
+
+.ui-datepicker-calendar .ui-state-afastado , .ui-datepicker-calendar .ui-state-afastado .ui-state-active {
+background: lightgreen!important;
+}
+
+.ui-datepicker-calendar .ui-state-active-fds, .ui-datepicker-calendar .ui-state-active-fds .ui-state-active {
+background: orange!important;
+color: #111!important;
+}
+
+.ui-datepicker-calendar .ui-state-active-fds a {
+color: #111!important;
+}
+
+#items p{
+  cursor: pointer;
+  margin: 0;
+  padding: 6px;
+  font-size:12px;
+  color: #333333;
+}
+
+#menu_interessado{
+  display:none;
+  position:fixed;
+  border:1px solid #B2B2B2;
+  width:180px;      background:#F9F9F9;
+  box-shadow: 3px 3px 2px #E9E9E9;
+  z-index: 10001;
+}
+
+#items p:hover{
+  color: white;
+  background:#284570;
+}
+
+#periodo ~ img, #competencia img{
+   /*content:url("/sei/imagens/sei_relacionados.png");*/
+    position: relative; float: right; cursor: pointer; margin: -26px 0px; width: 24px;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    outline: 0;
+}
+
+#periodo ~ img:hover, #competencia img:hover {
+-webkit-transform: rotate(-180);
+-ms-transform: rotate(-180deg);
+ transform: rotate(-180deg);
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+z-index: 2;
+}
