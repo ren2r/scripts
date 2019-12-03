@@ -659,7 +659,7 @@ color: #111!important;
 z-index: 2;
 }
 
-#acp_detalhe:after {
+#acp_detalhe::after {
 	content: attr(data-id);
 	position: absolute;
 }
