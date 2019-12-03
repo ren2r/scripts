@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb:hover{
 #divInfraBarraSuperior {
 	display: none;
 }
-div.infraBarraSistema,  div.infraBarraSuperior, #custom_toolbar {
+div.infraBarraSistema,  div.infraBarraSuperior {
 	z-index: 100;
 	left: 0;
 	top: 0;
@@ -101,12 +101,12 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 #divArvoreAcoes.infraBarraComandos a,  #divComandos.infraBarraComandos a, #custom_toolbar { margin: 1px; margin-bottom: 20px; }
 
 #custom_toolbar {
-	top: -10px;
+	top: -5px;
 	/*top: 0px;*/
 	left: 300px!important;
 }
 #divArvoreAcoes.infraBarraComandos {
-	top: -10px;
+	top: -5px;
 	/*top: 0px;*/
 	/*left: 400px;*/
 }
@@ -115,13 +115,13 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*top: -10px;*/
 	/*z-index: 10001;*/
 	/*top: 30px;*/
-	top: -10px;
+	top: -5px;
 	left: 300px;
 }
 #divInfraAreaTelaD{ border: 0; }
 
 #custom_toolbar,
-#divArvoreAcoes.infraBarraComandos, 
+#divArvoreAcoes.infraBarraComandos,
 #divComandos.infraBarraComandos {
 	/*background: blueviolet;*/
 	/*pointer-events: none;*/
@@ -139,7 +139,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*bottom: 30px;*/
 	/*width: 62px;*/
 	/*width: 410px;*/
-	height: 60px;
+	height: 36px;
 	max-height: 60px;
 	max-width: 460px;
 	position: fixed;
@@ -221,7 +221,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 #divInformacao {
 	/*position: fixed;*/
 	bottom: 0px;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 	padding: 4px;
 	/*margin-bottom: 16px;*/
 	/*margin-left: -10px;*/
