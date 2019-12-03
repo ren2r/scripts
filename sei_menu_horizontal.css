@@ -237,3 +237,6 @@ span.infraArvoreNoSelecionado {
 	background: #3267ff;
 }
 
+#divArvoreAcoes {
+	display:none!important;
+}
