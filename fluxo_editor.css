@@ -658,3 +658,7 @@ color: #111!important;
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
 z-index: 2;
 }
+
+#container {
+	height: 75%!important;
+}
