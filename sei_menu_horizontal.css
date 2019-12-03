@@ -114,7 +114,8 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 #divComandos.infraBarraComandos {
 	/*top: -10px;*/
 	/*z-index: 10001;*/
-	top: 30px;
+	/*top: 30px;*/
+	top: -10px;
 	left: 300px;
 }
 #divInfraAreaTelaD{ border: 0; }
@@ -182,8 +183,8 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*background-image: linear-gradient(to right, #1e3c72 0%, #2a5298 51%, #1e3c72 100%);*/
 	background-image: linear-gradient(to right, #3168ff 0%, #10acff 51%, #3267ff 100%);
 	transition: width 0.4s ease-in 0.2s, height 0.1s 0.1s;
-	padding: 2px;
-	padding-top: 6px;
+	/*padding: 2px;*/
+	/*padding-top: 6px;*/
 	transition:transform 0.2s ease-out;
 	/*box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.80);*/
 	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.4);
