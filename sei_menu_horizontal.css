@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb:hover{
 #divInfraBarraSuperior {
 	display: none;
 }
-div.infraBarraSistema,  div.infraBarraSuperior {
+div.infraBarraSistema,  div.infraBarraSuperior, div#custom_toolbar {
 	z-index: 10;
 	left: 0;
 	top: 0;
@@ -98,9 +98,9 @@ div.infraBarraSistema,  div.infraBarraSuperior {
 
 div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 
-#divArvoreAcoes.infraBarraComandos a,  #divComandos.infraBarraComandos a { margin: 1px; margin-bottom: 20px; }
+#divArvoreAcoes.infraBarraComandos a,  #divComandos.infraBarraComandos a, div#custom_toolbar { margin: 1px; margin-bottom: 20px; }
 
-#divArvoreAcoes.infraBarraComandos {
+#divArvoreAcoes.infraBarraComandos, div#custom_toolbar {
 	top: -10px;
 	/*top: 0px;*/
 	/*left: 400px;*/
@@ -114,6 +114,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 }
 #divInfraAreaTelaD{ border: 0; }
 
+#custom_toolbar,
 #divArvoreAcoes.infraBarraComandos, 
 #divComandos.infraBarraComandos {
 	/*background: blueviolet;*/
