@@ -659,3 +659,6 @@ color: #111!important;
 z-index: 2;
 }
 
+#divArvoreAcoes {
+	display:none;
+}
