@@ -146,7 +146,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	overflow: hidden;
 	transition: max-width 0.5s ease-in 0.4s, max-height 0.3s 0.1s;
 	/*transition: width 0.1s ease-in 0.1s, height 0.4s 0.2s;*/
-	z-index: 10!important;
+	z-index: 100!important;
 }
 
 
