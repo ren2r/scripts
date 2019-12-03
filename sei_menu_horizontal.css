@@ -103,7 +103,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 #custom_toolbar {
 	top: -10px;
 	/*top: 0px;*/
-	left: 400px;
+	left: 300px!important;
 }
 #divArvoreAcoes.infraBarraComandos {
 	top: -10px;
