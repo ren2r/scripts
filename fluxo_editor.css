@@ -658,7 +658,3 @@ color: #111!important;
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
 z-index: 2;
 }
-
-#divArvoreAcoes {
-	display:none!important;
-}
