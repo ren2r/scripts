@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb:hover{
 #divInfraBarraSuperior {
 	display: none;
 }
-div.infraBarraSistema,  div.infraBarraSuperior, div#custom_toolbar {
+div.infraBarraSistema,  div.infraBarraSuperior, #custom_toolbar {
 	z-index: 10;
 	left: 0;
 	top: 0;
@@ -98,9 +98,9 @@ div.infraBarraSistema,  div.infraBarraSuperior, div#custom_toolbar {
 
 div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 
-#divArvoreAcoes.infraBarraComandos a,  #divComandos.infraBarraComandos a, div#custom_toolbar { margin: 1px; margin-bottom: 20px; }
+#divArvoreAcoes.infraBarraComandos a,  #divComandos.infraBarraComandos a, #custom_toolbar { margin: 1px; margin-bottom: 20px; }
 
-#divArvoreAcoes.infraBarraComandos, div#custom_toolbar {
+#divArvoreAcoes.infraBarraComandos, #custom_toolbar {
 	top: -10px;
 	/*top: 0px;*/
 	/*left: 400px;*/
@@ -144,6 +144,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 }
 
 
+#custom_toolbar:hover,
 .infraBarraComandos#divArvoreAcoes:hover, 
 .infraBarraComandos#divArvoreAcoes:focus-within,
 .infraBarraComandos#divComandos:hover, 
@@ -158,6 +159,8 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	transition: max-height 0.4s 0.4s, max-width 0.3s ease-in 0.1s;
 	/*transition: height 0.2s 0.2s, width 0.2s ease-in 0.4s;*/
 }
+
+#custom_toolbar img,
 .infraBarraComandos#divArvoreAcoes img,
 .infraBarraComandos#divComandos img {
 	border:	 1px solid #ddd!important;
@@ -180,6 +183,8 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.80);*/
 	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.4);
 }
+
+#custom_toolbar a:hover > img,
 .infraBarraComandos#divArvoreAcoes a:hover > img ,
 .infraBarraComandos#divComandos a:hover > img{
 	/*border-radius: 10px;*/
@@ -192,11 +197,13 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	background-position: right center;
 }
 
+#custom_toolbar a:active > img,
 .infraBarraComandos#divArvoreAcoes a:active > img,
 .infraBarraComandos#divComandos a:active > img {
 	box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.8);
 }
 
+#custom_toolbar a:focus,
 .infraBarraComandos#divArvoreAcoes a:focus, 
 .infraBarraComandos#divComandos a:focus { 
 	outline: none;
