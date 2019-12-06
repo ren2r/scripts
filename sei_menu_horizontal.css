@@ -139,8 +139,8 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 	/*bottom: 30px;*/
 	/*width: 62px;*/
 	/*width: 410px;*/
-	height: 36px;
-	max-height: 44px;
+	height: 40px;
+	max-height: 48px;
 	max-width: 460px;
 	position: fixed;
 	overflow: hidden;
@@ -221,7 +221,7 @@ div.infraAreaGlobal { /*border: .2em solid #2e70ff;*/ border: 0; }
 #divInformacao {
 	/*position: fixed;*/
 	bottom: 0px;
-	/*margin-top: 40px;*/
+	margin-top: 40px;
 	padding: 4px;
 	/*margin-bottom: 16px;*/
 	/*margin-left: -10px;*/
@@ -247,10 +247,74 @@ span.infraArvoreNoSelecionado {
 }
 
 .infraArvore a:hover > span.infraArvoreNoSelecionado{
-	/*background-color: #2979ff;*/
-	background: #3267ff;
+    /*background-color: #2979ff;*/
+    background: #3267ff;
 }
 
-#divArvoreAcoes {
-	display:none!important;
+.dropzone-wrapper {
+    transition:  opacity .3s linear, visibility 0s .3s;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(66, 66, 66);
+    border-image: initial;
+    border-radius: 4px;
+    z-index: 1000;
 }
+.dropzone-wrapper.visible{
+    transition: opacity .3s linear;
+    visibility: visible;
+    opacity: 1;
+}
+.dropzone-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(242, 242, 242);
+    opacity: 0.8;
+}
+.dropzone-ui {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translate(0px, -50%);
+    text-align: center;
+}
+.dropzone-icon {
+    display: inline-block;
+    /*height: 36px;
+    width: 36px;*/
+    cursor: default;
+}
+.dropzone-label{
+    font-size: medium;
+}
+.tipo-anexo {
+    text-align: center;
+    padding: 20px 20px 20px 40px;
+    border-radius: 4px;
+    margin: 12px;
+    background-color: #c9c9c9;
+    border: 0px solid #222;
+    font-size: medium;
+    transition: background-color .3s linear;
+}
+.tipo-anexo.selecionado{
+    background-color: #77cc51!important;
+    transition: background-color .1s linear;
+}
+/*.tipo-anexo:before{
+/*content:url('/infra_css/imagens/pdf.gif');*/
+/*content:url('http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png');
+position:fixed;
+left:15px;
+}*/
